@@ -1,6 +1,5 @@
 <!DOCTYPE html> 
 <html ng-app="mainModule">
-
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -16,8 +15,8 @@
 		<script src="./services/FilterService.js"></script>
 		<script src="./classes/Meal.js" type="module"></script>
 	</head>
-		<body ng-keypress="searchForMeal($event)" ng-controller="HeaderController">
-				<ng-include src="'./header/header.html'"></ng-include>
-			<div ng-view></div>
-		</body>
+	<body ng-keypress="getSearchedMeal($event)"  ng-click="onWindowClick($event)" ng-controller="HeaderController">
+		<ng-include src="'./header/header.html'"></ng-include>
+		<div ng-view></div>
+	</body>
 </html>

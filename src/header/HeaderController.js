@@ -6,13 +6,14 @@
     MealService.getCategories().then(categories => {
       $scope.firstMenu = categories
     })
-    $scope.searchForMeal = function (key) {
+
+    $scope.getSearchedMeal = function (key) {
       if (key.key === 'Enter') {
         FilterService.filter('search', $scope.$$childHead.searchText)
       }
     }
 
-    $scope.randomMeal = function () {
+    $scope.getRandomMeal = function () {
       FilterService.filter('random', $scope.search)
     }
 
@@ -83,7 +84,7 @@
       }
     }
 
-    window.onclick = function (event) {
+    $scope.onWindowClick = function (event) {
       const video = document.getElementById('video_window')
       if (event.target === video) {
         document.getElementById('video_window').classList.add('hideWindow')
