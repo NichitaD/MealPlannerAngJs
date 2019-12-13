@@ -6,10 +6,9 @@
     MealService.getCategories().then(categories => {
       $scope.firstMenu = categories
     })
-
     $scope.searchForMeal = function (key) {
       if (key.key === 'Enter') {
-        FilterService.filter('search', $scope.search)
+        FilterService.filter('search', $scope.$$childHead.searchText)
       }
     }
 
@@ -62,7 +61,9 @@
         element.setProperty('--list-color', 'white')
         element.setProperty('--search-bar', '#5e5e5e')
         element.setProperty('--shadow', '#5e5e5e')
-        document.getElementById('close_button').src = './images/close_dark.png'
+        try {
+          document.getElementById('close_button').src = './images/close_dark.png'
+        } catch (e) {}
         this.color = 'dark'
       } else {
         setTimeout(function () {
@@ -75,7 +76,9 @@
         element.setProperty('--list-color', '#6b6b6b')
         element.setProperty('--search-bar', 'white')
         element.setProperty('--shadow', 'rgba(0, 0, 0, 0.19)')
-        document.getElementById('close_button').src = './images/close_light.png'
+        try {
+          document.getElementById('close_button').src = './images/close_light.png'
+        } catch (e) {}
         this.color = 'light'
       }
     }

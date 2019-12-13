@@ -1,0 +1,35 @@
+<header>
+    <div class="top_bar">
+      <div class="searchBar"> 
+          <input class="search" id="search" type="text" placeholder="Search... " ng-model="searchText"/>
+      </div>
+      <div class="menuButton"> 
+          <img src="images/menu.png" class="menu" alt="menu bar" id="menu" ng-click="toggleMenu()">
+      </div>
+      <div>
+          <div class="menu_content" id="menu_content"  style="opacity:0">
+              <ul class="menu_list" id="menu_list" ng-controller="HeaderController">
+                  <li class="category" ng-repeat="category in firstMenu" ng-click="openSecondMenu()">{{ category }}</li>
+              </ul>
+          </div>
+          <div class="second_menu" id="second_menu">
+              <ul class="second_list" id="second_list">
+                  <li ng-repeat="meal in secondMenu" ng-click="getSelectedMeal()">{{ meal }}</li>
+              </ul>
+          </div>
+      </div>
+      <div class="toggle"> 
+          <label class="switch">
+              <input type="checkbox" id="switch" ng-change="toggleTheme()" ng-model="confirmed"/>
+              <span class="slider round"></span>
+          </label>
+      </div>
+    </div>
+    <div class="text">
+      <h1 class="title">Feeling hungry ?</h1>
+      <p class="go_click">Get a random meal by clicking the button</p>
+    </div>
+    <div >
+      <button class="button" id="button" ng-click="randomMeal()" ng-controller="HeaderController">GET MEAL 🍔</button>
+     </div>
+  </header>

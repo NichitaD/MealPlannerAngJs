@@ -1,4 +1,4 @@
-import Meal from './Meal.js'
+import Meal from '../classes/Meal.js'
 
 (function () {
   const API_URL = 'https://www.themealdb.com/api/json/v1/1'

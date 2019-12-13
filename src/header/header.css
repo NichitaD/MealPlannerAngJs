@@ -1,4 +1,4 @@
-@import "index.css";
+
 
 .top_bar {
     width: 100%;
@@ -9,8 +9,8 @@
 .search {
     border-radius: 50px;
     border: 2px solid grey;
-    margin-left: 48px;
-    background: var(--search-bar) url("./images/light.png") no-repeat 12px center;
+    margin-left: 46px;
+    background: var(--search-bar) url("../images/light.png") no-repeat 12px center;
     color: var(--h5-color);
     padding-left: 35px;
     padding-right: 10px;
@@ -39,7 +39,7 @@
 .menu:hover{
     cursor: pointer;
     height: 47px;
-    top: 1.4px;
+    top: 0px;
     left: 3.5px;
 }
 

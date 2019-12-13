@@ -1,7 +1,6 @@
-@import "index.css";
 
 main {
-    width: fit-content
+    width: fit-content;
     background: var(--background-color);
     display: inline-flex;
     flex-direction: column;
@@ -178,8 +177,6 @@ h4 {
     font-weight: 900;
     font-size: 30px;
 }
-
-@import "index.css";
 
 .video_window {
     display: flex; 
