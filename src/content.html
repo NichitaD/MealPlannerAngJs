@@ -1,0 +1,40 @@
+<main>
+    <div class="container1">
+        <div class="img_wrapper">
+            <img class="img" id="img" src="{{imageSource}}" alt="Picture of meal" />
+            <div class="overlay">
+                <div class="content">
+                    <img class="play_button" id="play_button" src="./images/play.png" ng-click="playVideo()" />
+                </div>
+            </div>
+        </div>
+        <div class="recepy">
+            <h2 class="rcp_title" id="rcp_title">{{recipeTitle}}</h2>
+            <h5>
+                Category:
+                <p class="category" id="category"> {{recipeCategory}}</p>
+            </h5>
+            <h5>
+                Tags:
+                <p class="tags" id="tags">{{recipeTags}}</p>
+            </h5>
+            <div class="img_wrapper_mob">
+                <img class="img_mob" id="img_mob" src="{{imageSource}}" alt="Picture of meal" />
+                <div class="overlay_mob">
+                    <div class="content_mob">
+                        <img class="play_button_mob" id="play_button_mob"  src="./images/play.png" ng-click="playVideo()" />
+                    </div>
+                </div>
+            </div>
+            <p class="rcp_text" id="rcp_text">{{recipeInstructions}}</p>
+            <h4>Ingredients:</h4>
+            <ul class="list" id="list"><li ng-repeat="ingredient in ingredients">{{ingredient}}</li></ul>
+        </div>
+    </div>
+    <div id="video_window" class="video_window">
+        <div class="container2">
+            <span class="close" id="close"><img id="close_button" src="./images/close_light.png" ng-click="closeVideo()"/></span>
+            <iframe class="video" id="video" ng-src="{{trustSrc(videoSource)}}" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html ng-app="mainModule">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="header.css" />
+		<link rel="stylesheet" href="content.css" />
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+		<script data-require="angular-route@*" data-semver="1.2.14" src="https://code.angularjs.org/1.2.14/angular-route.js"></script>
+		<script src="app.js"></script>
+		<script type="module" src="HeaderController.js"></script>
+		<script type="module" src="ContentController.js"></script>
+		<script type="module" src="MealService.js"></script>
+		<script src="FilterService.js"></script>
+		<script src="Meal.js" type="module"></script>
+	</head>
+		<body ng-keypress="searchForMeal($event)" ng-controller="HeaderController">
+				<header>
+						<div class="top_bar">
+							<div class="searchBar"> 
+									<input class="search" id="search" type="text" placeholder="Search... " ng-model="search"/>
+							</div>
+							<div class="menuButton"> 
+									<img src="images/menu.png" class="menu" alt="menu bar" id="menu" ng-click="toggleMenu()">
+							</div>
+							<div>
+									<div class="menu_content" id="menu_content"  style="opacity:0">
+											<ul class="menu_list" id="menu_list" ng-controller="HeaderController">
+													<li class="category" ng-repeat="category in firstMenu" ng-click="openSecondMenu()">{{ category }}</li>
+											</ul>
+									</div>
+									<div class="second_menu" id="second_menu">
+											<ul class="second_list" id="second_list">
+													<li ng-repeat="meal in secondMenu" ng-click="getSelectedMeal()">{{ meal }}</li>
+											</ul>
+									</div>
+							</div>
+							<div class="toggle"> 
+									<label class="switch">
+											<input type="checkbox" id="switch" ng-change="toggleTheme()" ng-model="confirmed"/>
+											<span class="slider round"></span>
+									</label>
+							</div>
+						</div>
+						<div class="text">
+							<h1 class="title">Feeling hungry ?</h1>
+							<p class="go_click">Get a random meal by clicking the button</p>
+						</div>
+						<div >
+							<button class="button" id="button" ng-click="randomMeal()" ng-controller="HeaderController">GET MEAL 🍔</button>
+						 </div>
+					</header>
+			<div ng-view></div>
+		</body>
+</html>

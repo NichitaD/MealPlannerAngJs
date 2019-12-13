@@ -1,0 +1,13 @@
+{
+    "editor.tabSize": 2,
+    "git.ignoreLimitWarning": true,
+    "editor.renderWhitespace": "boundary",
+    "prettier.requireConfig": true,
+    "prettier.insertPragma": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript"
+    ],
+    "liveServer.settings.port": 5501
+}
