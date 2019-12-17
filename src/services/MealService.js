@@ -18,7 +18,10 @@ import Meal from '../classes/Meal.js'
       const random = Math.floor(Math.random() * data.meals.length)
       return new Meal(data.meals[random])
     }
-
+    /**
+     * Searches for a meal by its name
+     * @param {string} name The meal name
+     */
     const getMealsByName = async function (name) {
       const response = await fetch(
         `${API_URL}/search.php?s=${name}`

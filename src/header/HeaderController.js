@@ -9,7 +9,7 @@
 
     $scope.getSearchedMeal = function (key) {
       if (key.key === 'Enter') {
-        FilterService.filter('search', $scope.$$childHead.searchText)
+        FilterService.filter('search', $scope.searchText)
       }
     }
 

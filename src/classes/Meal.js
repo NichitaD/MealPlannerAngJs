@@ -27,25 +27,6 @@ class Meal {
       )
     }
   }
-
-  getText (context) {
-    return {
-      title: this.title,
-      category: this.category,
-      tags: this.tags,
-      instructions: this.instructions,
-      ingredients: this.ingredients,
-      image: this.image
-    }
-  }
-
-  getVideo () {
-    return this.video
-  }
-
-  getImage () {
-    return this.image
-  }
 }
 
 export default Meal

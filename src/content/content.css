@@ -24,7 +24,7 @@ main {
     transition: background 0.7s, border 0.7s, box-shadow 0.7s;
 }
 
-.img_wrapper {
+image-wrapper {
     padding: 0px;
     position: relative;
     grid-column: 1 / 3;

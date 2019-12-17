@@ -1,18 +1,18 @@
-<header>
+<header ng-controller="HeaderController" ng-click="onWindowClick($event)">
     <div class="top_bar">
       <div class="searchBar"> 
-          <input class="search" id="search" type="text" placeholder="Search... " ng-model="searchText"/>
+          <input ng-keypress="getSearchedMeal($event)" class="search" id="search" type="text" placeholder="Search... " ng-model="searchText"/>
       </div>
       <div class="menuButton"> 
           <img src="images/menu.png" class="menu" alt="menu bar" id="menu" ng-click="toggleMenu()">
       </div>
       <div>
-          <div class="menu_content" id="menu_content"  style="opacity:0">
+          <div  class="menu_content" id="menu_content"  style="opacity:0">
               <ul class="menu_list" id="menu_list" ng-controller="HeaderController">
                   <li class="category" ng-repeat="category in firstMenu" ng-click="openSecondMenu()">{{ category }}</li>
               </ul>
           </div>
-          <div class="second_menu" id="second_menu">
+          <div  class="second_menu" id="second_menu">
               <ul class="second_list" id="second_list">
                   <li ng-repeat="meal in secondMenu" ng-click="getSelectedMeal()">{{ meal }}</li>
               </ul>
@@ -30,6 +30,6 @@
       <p class="go_click">Get a random meal by clicking the button</p>
     </div>
     <div >
-      <button class="button" id="button" ng-click="getRandomMeal()" ng-controller="HeaderController">GET MEAL 🍔</button>
+      <button class="button" id="button" ng-click="getRandomMeal()">GET MEAL 🍔</button>
      </div>
   </header>

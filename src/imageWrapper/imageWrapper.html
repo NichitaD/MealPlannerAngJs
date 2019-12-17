@@ -1,0 +1,15 @@
+<div class="img_wrapper">
+  <img class="img" id="img" src="{{$ctrl.imageSource.source}}" alt="Picture of meal" />
+  <div class="overlay">
+      <div class="content">
+          <img class="play_button" id="play_button" src="./images/play.png" ng-click="playVideo()" />
+      </div>
+  </div>
+</div>
+
+<div id="video_window" class="video_window" ng-class="videoState">
+  <div class="container2">
+      <span class="close" id="close"><img id="close_button" src="./images/close_light.png" ng-click="closeVideo()"/></span>
+      <iframe class="video" id="video" ng-src="{{trustSrc($ctrl.videoSource.source)}}" frameborder="0" allowfullscreen=""></iframe>
+  </div>
+</div>

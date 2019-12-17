@@ -1,21 +1,24 @@
 <!DOCTYPE html> 
 <html ng-app="mainModule">
 	<head>
+		<title>Meal Planner</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="./header/header.css" />
 		<link rel="stylesheet" href="./content/content.css" />
 		<link rel="stylesheet" href="index.css" />
-    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="./images/icon.png" />
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 		<script data-require="angular-route@*" data-semver="1.2.14" src="https://code.angularjs.org/1.2.14/angular-route.js"></script>
 		<script src="app.js"></script>
-		<script type="module" src="./header/HeaderController.js"></script>
-		<script type="module" src="./content/ContentController.js"></script>
+		<script src="./header/HeaderController.js"></script>
+		<script src="./content/ContentController.js"></script>
 		<script type="module" src="./services/MealService.js"></script>
 		<script src="./services/FilterService.js"></script>
-		<script src="./classes/Meal.js" type="module"></script>
+		<script type="module" src="./classes/Meal.js"></script>
+		<script src='./imageWrapper/imageWrapper.component.js'></script>
 	</head>
-	<body ng-keypress="getSearchedMeal($event)"  ng-click="onWindowClick($event)" ng-controller="HeaderController">
+	<body>
 		<ng-include src="'./header/header.html'"></ng-include>
 		<div ng-view></div>
 	</body>

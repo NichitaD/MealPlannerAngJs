@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
+    "@types/angular": "^1.6.57",
     "angular": "^1.7.9",
     "mustache": "^3.1.0"
   },
